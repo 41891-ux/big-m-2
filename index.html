@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>INVASORES - ARCADE V2 (TOUHOU + GRADIUS III HUD)</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Scripts clássicos carregados em ordem estrita via defer -->
+  <script defer src="js/config.js"></script>
+  <script defer src="js/util.js"></script>
+  <script defer src="js/assets.js"></script>
+  <script defer src="js/input.js"></script>
+  <script defer src="js/audio.js"></script>
+
+  <!-- Entidades do jogo -->
+  <script defer src="js/entities/player.js"></script>
+  <script defer src="js/entities/formation.js"></script>
+  <script defer src="js/entities/shots.js"></script>
+  <script defer src="js/entities/bunkers.js"></script>
+  <script defer src="js/entities/ufo.js"></script>
+  <script defer src="js/entities/items.js"></script>
+  <script defer src="js/entities/specials.js"></script>
+  <script defer src="js/entities/boss.js"></script>
+
+  <!-- Interface Visual e HUD Gradius III -->
+  <script defer src="js/ui/hud.js"></script>
+  <script defer src="js/ui/toast.js"></script>
+  <script defer src="js/ui/controls-panel.js"></script>
+
+  <!-- Núcleo e Inicialização -->
+  <script defer src="js/game.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+
+    <!-- Controles virtuais opcionais para dispositivos de toque -->
+    <div id="touch-controls" class="touch-overlay">
+      <div class="touch-dpad">
+        <button id="btn-left" class="touch-btn" aria-label="Esquerda">◀</button>
+        <button id="btn-right" class="touch-btn" aria-label="Direita">▶</button>
+      </div>
+      <div class="touch-actions">
+        <button id="btn-parry" class="touch-btn touch-btn-parry" aria-label="Parry">C</button>
+        <button id="btn-special" class="touch-btn touch-btn-special" aria-label="Especial">⚡</button>
+        <button id="btn-fire" class="touch-btn touch-btn-fire" aria-label="Atirar">●</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
